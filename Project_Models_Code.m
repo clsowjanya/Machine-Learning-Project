@@ -1,14 +1,4 @@
-% Team Project - SEIS 763-02: Machine Learning and Deep Learning  %
-%                                                                 %
-% Team Members:                                                   %
-%                                                                 %
-% Nathan Adams                                                    %
-% Mowlid Abdillahi                                                %
-% Sowjanya Chippada                                               %
-% Ahmad K. Lubnani                                                %
-% Ronald E. Twite                                                 %
-% Terrence E. White                                               %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Machine Learning and Deep Learning Project - Classification problem
 
 
 clc;
@@ -151,7 +141,7 @@ end
 technique1_train_recall_class0 = recall_logistic_train(2);
 technique1_train_recall_class1 = recall_logistic_train(1);
 
-%%% Précision
+%%% PrÃ©cision
 for i =1:size(CFM_logistic_train,1)
     precision_logistic_train(i)=CFM_logistic_train(i,i)/sum(CFM_logistic_train(:,i));
 end
@@ -197,7 +187,7 @@ end
 technique1_test_recall_class0 = recall_logistic_test(2);
 technique1_test_recall_class1 = recall_logistic_test(1);
  
-%%% Précision
+%%% PrÃ©cision
 for i =1:size(CFM_logistic_test,1)
     precision_logistic_test(i)=CFM_logistic_test(i,i)/sum(CFM_logistic_test(:,i));
 end
@@ -281,7 +271,7 @@ end
 technique1_recall_after_lasso_class0 = recall_logistic_after_lasso(2);
 technique1_recall_after_lasso_class1 = recall_logistic_after_lasso(1);
 
-% Précision
+% PrÃ©cision
 for i =1:size(CFM_logistic_after_lasso,1)
     precision_logistic_after_lasso(i)=CFM_logistic_after_lasso(i,i)/sum(CFM_logistic_after_lasso(:,i));
 end
@@ -383,7 +373,7 @@ end
 technique2_lasso_recall_class0 = recall_lasso_svm(2);
 technique2_lasso_recall_class1 = recall_lasso_svm(1);
 
-% Précision
+% PrÃ©cision
 for i =1:size(CFM_SVM,1)
     precision_svm(i)=CFM_SVM(i,i)/sum(CFM_SVM(:,i));
 end
@@ -497,7 +487,7 @@ end
 technique3_recall_lasso_class0 = recall_kernel_lasso(2);
 technique3_recall_lasso_class1 = recall_kernel_lasso(1);
 
-% Précision
+% PrÃ©cision
 for i =1:size(CFM_kernel,1)
     precision_kernel(i)=CFM_kernel(i,i)/sum(CFM_kernel(:,i));
 end
@@ -643,7 +633,7 @@ end
 technique4_recall_8_3_class1 = recall_nn_8_3(1);
 technique4_recall_8_3_class0 = recall_nn_8_3(2);
 
-% Précision
+% PrÃ©cision
 for i =1:size(CFM_nn,1)
     precision_nn(i)=CFM_nn(i,i)/sum(CFM_nn(:,i));
 end
@@ -793,7 +783,7 @@ end
 ensemble_soft_recall_class0 = ensemble_soft_recall(2);
 ensemble_soft_recall_class1 = ensemble_soft_recall(1);
 
-% Précision
+% PrÃ©cision
 for i =1:size(CFM_hard_ensemble,1)
     ensemble_hard_precision(i)=CFM_hard_ensemble(i,i)/sum(CFM_hard_ensemble(:,i));
 end
